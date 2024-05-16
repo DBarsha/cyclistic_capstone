@@ -1,0 +1,555 @@
+-- prepare--
+SELECT 
+ ride_id,
+ rideable_type,
+ started_at,
+ ended_at,
+ start_station_name,
+ end_station_name,
+ member_casual
+FROM cyclistic_bike.dbo.[202303]
+UNION ALL
+SELECT 
+ ride_id,
+ rideable_type,
+ started_at,
+ ended_at,
+ start_station_name,
+ end_station_name,
+ member_casual
+FROM cyclistic_bike.dbo.[202304]
+UNION All
+SELECT 
+ ride_id,
+ rideable_type,
+ started_at,
+ ended_at,
+ start_station_name,
+ end_station_name,
+ member_casual
+FROM cyclistic_bike.dbo.[202305]
+UNION ALL
+SELECT 
+ ride_id,
+ rideable_type,
+ started_at,
+ ended_at,
+ start_station_name,
+ end_station_name,
+ member_casual
+FROM cyclistic_bike.dbo.[202306]
+UNION ALL
+SELECT 
+ ride_id,
+ rideable_type,
+ started_at,
+ ended_at,
+ start_station_name,
+ end_station_name,
+ member_casual
+FROM cyclistic_bike.dbo.[202307]
+UNION ALL
+SELECT 
+ ride_id,
+ rideable_type,
+ started_at,
+ ended_at,
+ start_station_name,
+ end_station_name,
+ member_casual
+FROM cyclistic_bike.dbo.[202308]
+UNION ALL
+SELECT 
+ ride_id,
+ rideable_type,
+ started_at,
+ ended_at,
+ start_station_name,
+ end_station_name,
+ member_casual
+FROM cyclistic_bike.dbo.[202309]
+UNION ALL
+SELECT 
+ ride_id,
+ rideable_type,
+ started_at,
+ ended_at,
+ start_station_name,
+ end_station_name,
+ member_casual
+FROM cyclistic_bike.dbo.[202310]
+UNION ALL
+SELECT 
+ ride_id,
+ rideable_type,
+ started_at,
+ ended_at,
+ start_station_name,
+ end_station_name,
+ member_casual
+FROM cyclistic_bike.dbo.[202311]
+UNION ALL
+SELECT 
+ ride_id,
+ rideable_type,
+ started_at,
+ ended_at,
+ start_station_name,
+ end_station_name,
+ member_casual
+FROM cyclistic_bike.dbo.[202312]
+UNION ALL
+SELECT 
+ ride_id,
+ rideable_type,
+ started_at,
+ ended_at,
+ start_station_name,
+ end_station_name,
+ member_casual
+FROM cyclistic_bike.dbo.[202401]
+UNION ALL
+SELECT 
+ ride_id,
+ rideable_type,
+ started_at,
+ ended_at,
+ start_station_name,
+ end_station_name,
+ member_casual
+FROM cyclistic_bike.dbo.[202402];
+
+--Process--
+-- Since I was getting errors while uploading the combined file, I modified the data types started_at and ended_at into datetime2.
+SELECT 
+  ride_id,
+  rideable_type,
+  CONVERT(datetime2, started_at) AS started_at,
+  CONVERT(datetime2, ended_at) AS ended_at,
+  start_station_name,
+  end_station_name,
+  member_casual
+FROM cyclistic_bike.dbo.[202303]
+UNION ALL
+SELECT 
+  ride_id,
+  rideable_type,
+  CONVERT(datetime2, started_at) AS started_at,
+  CONVERT(datetime2, ended_at) AS ended_at,
+  start_station_name,
+  end_station_name,
+  member_casual
+FROM cyclistic_bike.dbo.[202304]
+UNION ALL
+SELECT 
+  ride_id,
+  rideable_type,
+  CONVERT(datetime2, started_at) AS started_at,
+  CONVERT(datetime2, ended_at) AS ended_at,
+  start_station_name,
+  end_station_name,
+  member_casual
+FROM cyclistic_bike.dbo.[202305]
+UNION ALL
+SELECT 
+  ride_id,
+  rideable_type,
+  CONVERT(datetime2, started_at) AS started_at,
+  CONVERT(datetime2, ended_at) AS ended_at,
+  start_station_name,
+  end_station_name,
+  member_casual
+FROM cyclistic_bike.dbo.[202306]
+UNION ALL
+SELECT 
+  ride_id,
+  rideable_type,
+  CONVERT(datetime2, started_at) AS started_at,
+  CONVERT(datetime2, ended_at) AS ended_at,
+  start_station_name,
+  end_station_name,
+  member_casual
+FROM cyclistic_bike.dbo.[202307]
+UNION ALL
+SELECT 
+  ride_id,
+  rideable_type,
+  CONVERT(datetime2, started_at) AS started_at,
+  CONVERT(datetime2, ended_at) AS ended_at,
+  start_station_name,
+  end_station_name,
+  member_casual
+FROM cyclistic_bike.dbo.[202308]
+UNION ALL
+SELECT 
+  ride_id,
+  rideable_type,
+  CONVERT(datetime2, started_at) AS started_at,
+  CONVERT(datetime2, ended_at) AS ended_at,
+  start_station_name,
+  end_station_name,
+  member_casual
+FROM cyclistic_bike.dbo.[202309]
+UNION ALL
+SELECT 
+  ride_id,
+  rideable_type,
+  CONVERT(datetime2, started_at) AS started_at,
+  CONVERT(datetime2, ended_at) AS ended_at,
+  start_station_name,
+  end_station_name,
+  member_casual
+FROM cyclistic_bike.dbo.[202310]
+UNION ALL
+SELECT 
+  ride_id,
+  rideable_type,
+  CONVERT(datetime2, started_at) AS started_at,
+  CONVERT(datetime2, ended_at) AS ended_at,
+  start_station_name,
+  end_station_name,
+  member_casual
+FROM cyclistic_bike.dbo.[202311]
+UNION ALL
+SELECT 
+  ride_id,
+  rideable_type,
+  CONVERT(datetime2, started_at) AS started_at,
+  CONVERT(datetime2, ended_at) AS ended_at,
+  start_station_name,
+  end_station_name,
+  member_casual
+FROM cyclistic_bike.dbo.[202312]
+UNION ALL
+SELECT 
+  ride_id,
+  rideable_type,
+  CONVERT(datetime2, started_at) AS started_at,
+  CONVERT(datetime2, ended_at) AS ended_at,
+  start_station_name,
+  end_station_name,
+  member_casual
+FROM cyclistic_bike.dbo.[202401]
+UNION ALL
+SELECT 
+  ride_id,
+  rideable_type,
+  CONVERT(datetime2, started_at) AS started_at,
+  CONVERT(datetime2, ended_at) AS ended_at,
+  start_station_name,
+  end_station_name,
+  member_casual
+FROM cyclistic_bike.dbo.[202402];
+
+-- Changing columns, excluding latitude and longitude columns, is not useful for analysis because the exact same location on Earth can have different latitude and longitude numbers depending on which ellipsoid is being used and how that ellipsoid is used, so it can't be used to pin out locality.
+--Uploaded combined table into concole 
+
+--View table--
+SELECT *
+FROM cyclistic_bike.dbo.cyclistic_bike;
+--Which returned 57,07,168 rows and 7 columns. 
+
+-- After executed above query, I observed that started_at, start_station_name, ended_at, and end_station_name have null values to identify nulls in other columns.
+
+-- Identify and Remove Null values
+
+SELECT COUNT(*) AS TotalNullValues
+FROM cyclistic_bike.dbo.cyclistic_bike
+WHERE
+ride_id IS NULL OR ride_id = ''
+OR rideable_type IS NULL OR rideable_type = ''
+OR started_at IS NULL OR started_at = ''
+OR ended_at IS NULL OR ended_at = ''
+OR start_station_name IS NULL OR start_station_name = ''
+OR end_station_name IS NULL OR end_station_name = ''
+OR member_casual IS NULL OR member_casual = '';
+
+--13,74,645/- null values, many rides contain null values, either from start_station_name or end_station_name.
+--Cross check that all the null values have been fetched correctly or not.
+
+
+-- remove null vAlues
+DELETE FROM cyclistic_bike.dbo.cyclistic_bike
+WHERE
+ride_id IS NULL OR ride_id = ''
+OR rideable_type IS NULL OR rideable_type = ''
+OR started_at IS NULL OR started_at = ''
+OR ended_at IS NULL OR ended_at = ''
+OR start_station_name IS NULL OR start_station_name = ''
+OR end_station_name IS NULL OR end_station_name = ''
+OR member_casual IS NULL OR member_casual = '';
+--removed 13,74,645/- null values
+
+SELECT *
+FROM cyclistic_bike.dbo.cyclistic_bike;
+--4,332,523 rows are there, which means we have successfully removed the Null values. 
+--To clean the data, I removed all the rows that had neither start_station_name nor end_station_name values, using the query below.
+
+--Identify and remove duplicates 
+SELECT *,
+COUNT(*) AS duplicate_count
+FROM cyclistic_bike.dbo.cyclistic_bike
+GROUP BY
+ride_id,
+rideable_type,
+started_at,
+ended_at,
+start_station_name,
+end_station_name,
+member_casual
+HAVING COUNT(*) >1;
+-- no duplicate 
+
+SELECT COUNT (*)
+FROM cyclistic_bike.dbo.cyclistic_bike;
+
+-- Which returned a count of 4,332,523. This indicated that there were no duplicate rows in the data.
+
+
+
+-- Alter table to add column ride_length
+ALTER TABLE cyclistic_bike.dbo.cyclistic_bike
+ADD ride_length INT; -- Assuming ride_length should be an integer representing minutes
+
+-- Adding ride length column
+UPDATE cyclistic_bike.dbo.cyclistic_bike
+SET ride_length = DATEDIFF(minute, started_at, ended_at);
+
+
+
+-- Adding weekday column
+ALTER TABLE cyclistic_bike.dbo.cyclistic_bike
+ADD weekday VARCHAR(20);
+
+UPDATE cyclistic_bike.dbo.cyclistic_bike
+SET weekday = DATENAME(WEEKDAY, started_at);
+
+
+
+-- Preview updated table
+SELECT *
+FROM cyclistic_bike.dbo.cyclistic_bike;
+
+
+
+-- Count and delete records where started_at is higher than ended_at
+SELECT COUNT (ride_length)
+FROM cyclistic_bike.dbo.cyclistic_bike
+WHERE started_at > ended_at;
+
+DELETE FROM cyclistic_bike.dbo.cyclistic_bike
+WHERE started_at > ended_at;
+
+
+-- Count and delete where start_station_name and end_station_name have “test” text
+SELECT COUNT(*) AS test_records_count
+FROM cyclistic_bike.dbo.cyclistic_bike
+WHERE 
+  start_station_name LIKE ('%test%') OR 
+  end_station_name LIKE ('%test%') OR 
+  start_station_name LIKE ('%TEST%') OR 
+  end_station_name LIKE ('%TEST%') OR 
+  start_station_name LIKE ('%Test%') OR 
+  end_station_name LIKE ('%Test%');
+-- Result- test_records_count: 15
+
+--manually cross check the dataset
+SELECT *
+FROM cyclistic_bike.dbo.cyclistic_bike
+WHERE 
+  start_station_name LIKE ('%test%') OR 
+  end_station_name LIKE ('%test%') OR 
+  start_station_name LIKE ('%TEST%') OR 
+  end_station_name LIKE ('%TEST%') OR 
+  start_station_name LIKE ('%Test%') OR 
+  end_station_name LIKE ('%Test%')
+ORDER BY
+start_station_name,
+end_station_name
+DESC;
+
+DELETE FROM cyclistic_bike.dbo.cyclistic_bike
+WHERE 
+  start_station_name LIKE ('%test%') OR 
+  end_station_name LIKE ('%test%') OR 
+  start_station_name LIKE ('%TEST%') OR 
+  end_station_name LIKE ('%TEST%') OR 
+  start_station_name LIKE ('%Test%') OR 
+  end_station_name LIKE ('%Test%');
+
+
+
+--Varify that our dataset contains only two types of customers, namely casual and member:
+
+SELECT DISTINCT member_casual
+FROM cyclistic_bike.dbo.cyclistic_bike;
+--Based on the results of the query, it is clear that our data contains only two types of customers: casual and member.
+
+
+--In conclusion of the process phase, we have performed several data cleaning steps such as identifying and handling null values, removing unnecessary columns, and checking for duplicates. We have also confirmed the presence of two types of customers in our data.
+
+select * FROM cyclistic_bike.dbo.cyclistic_bike
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+-- #Analyze Phase 
+
+-- Count the differenece between member and casual users--
+SELECT
+COUNT(ride_id) AS member_casual_count,
+member_casual
+FROM cyclistic_bike.dbo.cyclistic_bike
+GROUP BY
+member_casual;
+--Result - member:2807118, casual: 1525322
+
+
+-- Ride percentage by member and casual
+SELECT
+    member_casual,
+    COUNT(*) AS total_rides,
+    CAST((COUNT(*) * 100.0) / (SELECT COUNT(*) FROM cyclistic_bike.dbo.cyclistic_bike) AS DECIMAL(10, 2)) AS ride_percentage
+FROM
+    cyclistic_bike.dbo.cyclistic_bike
+GROUP BY
+    member_casual;
+
+
+--Rideable type by member and casual users--
+SELECT COUNT(ride_id) AS no_of_riderable_types,
+rideable_type,
+member_casual
+FROM cyclistic_bike.dbo.cyclistic_bike
+GROUP BY
+rideable_type,
+member_casual
+ORDER BY no_of_riderable_types DESC;
+--no_of_riderable_types   rideable_type   member_casual
+--1845362	              classic_bike	  member
+--961756	              electric_bike	  member
+--881617	              classic_bike	  casual
+--571298	              electric_bike	  casual
+--72407	                  docked_bike	  casual
+
+
+
+-- Check the average time ride by user 
+SELECT member_casual,
+  CAST(AVG(ride_length) AS BIGINT) AS avg_ride_time
+FROM cyclistic_bike.dbo.cyclistic_bike
+GROUP BY member_casual;
+-- Get average ride duration
+SELECT ROUND(AVG(DATEDIFF(minute, started_at, ended_at)), 0) AS avg_ride_duration
+FROM cyclistic_bike.dbo.cyclistic_bike;
+
+
+-- Check the highest ride length value
+SELECT TOP 10 *
+FROM cyclistic_bike.dbo.cyclistic_bike
+ORDER BY ride_length DESC, started_at;
+
+
+
+--count ride by Hour and Day
+SELECT 
+    DATEPART(HOUR, started_at) AS ride_hour,
+    DATENAME(WEEKDAY, started_at) AS ride_day,
+	member_casual,
+    COUNT(*) AS ride_count
+FROM 
+    cyclistic_bike.dbo.cyclistic_bike
+GROUP BY
+    member_casual,
+    DATEPART(HOUR, started_at),
+    DATENAME(WEEKDAY, started_at)
+ORDER BY 
+    ride_count DESC;
+
+
+-- Varify busiest day 
+SELECT 
+    DATENAME(WEEKDAY, started_at) AS ride_day,
+    member_casual,
+    COUNT(*) AS ride_count
+FROM 
+    cyclistic_bike.dbo.cyclistic_bike
+GROUP BY 
+    DATENAME(WEEKDAY, started_at),
+    member_casual
+ORDER BY 
+    ride_count DESC;
+
+
+-- Varify busiest hour of the day
+SELECT 
+    DATEPART(HOUR, started_at) AS busiest_ride_hour,
+    DATENAME(WEEKDAY, started_at) AS ride_day,
+	member_casual,
+    COUNT(*) AS ride_count
+FROM 
+    cyclistic_bike.dbo.cyclistic_bike
+GROUP BY
+    member_casual,
+    DATEPART(HOUR, started_at),
+    DATENAME(WEEKDAY, started_at)
+ORDER BY 
+    ride_count DESC;
+
+
+
+
+
+
+
+-- Check if members or casuals users use more services on weekends
+
+SELECT 
+    DATENAME(WEEKDAY, started_at) AS weekday,
+    COUNT(*) AS weekday_count,
+    member_casual,
+    AVG(ride_length) AS avg_ride_length
+FROM 
+    cyclistic_bike.dbo.cyclistic_bike
+GROUP BY 
+    DATENAME(WEEKDAY, started_at),
+    member_casual
+ORDER BY 
+    weekday_count DESC;
+
+
+-- Number of rides and average per month (member)
+SELECT COUNT(ride_id) AS ride_count,
+  CAST(AVG(ride_length) AS BIGINT) AS avg_ride_duration_member,
+  DATENAME(MONTH, started_at) AS month
+FROM cyclistic_bike.dbo.cyclistic_bike
+WHERE member_casual = 'member'
+GROUP BY DATENAME(MONTH, started_at)
+ORDER BY DATENAME(MONTH, started_at);
+
+
+-- Number of rides and average per month (casual)
+SELECT COUNT(ride_id) AS ride_count,
+  CAST(AVG(ride_length) AS BIGINT) AS avg_ride_duration_casual,
+  DATENAME(MONTH, started_at) AS month
+FROM cyclistic_bike.dbo.cyclistic_bike
+WHERE member_casual IN ('casual')
+GROUP BY DATENAME(MONTH, started_at)
+ORDER BY DATENAME(MONTH, started_at);
+
+-- Check busiest month
+SELECT 
+   COUNT(ride_id) AS month_ride_count,
+   DATENAME(MONTH, started_at) AS month,
+   member_casual
+FROM cyclistic_bike.dbo.cyclistic_bike
+GROUP BY
+   DATENAME(MONTH, started_at),
+   member_casual
+ORDER BY 
+   month_ride_count DESC;
+
+
+
+
